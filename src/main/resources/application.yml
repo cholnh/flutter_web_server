@@ -1,0 +1,16 @@
+server:
+  port: 443
+
+  servlet:
+    context-path: /
+
+  ssl:
+    enabled: true
+    key-store: C:/ssl/poman.kr/sectigo/keystore.jks
+    key-store-type: jks
+    key-store-password: 26809t
+    key-alias: www.poman.kr
+
+spring:
+  mvc:
+    static-path-pattern: /**

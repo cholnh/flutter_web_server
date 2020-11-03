@@ -11,6 +11,21 @@ public class IndexController {
 
     @GetMapping
     public String index() {
-        return "index";
+        return "client/index";
+    }
+
+    @GetMapping("/privacy")
+    public String privacy() {
+        return "common/privacy";
+    }
+
+    @GetMapping("/terms")
+    public String terms() {
+        return "common/terms";
+    }
+
+    @GetMapping("/store")
+    public String store() {
+        return "store/index";
     }
 }
