@@ -5,12 +5,26 @@ server:
     context-path: /
 
   ssl:
-    enabled: true
+    enabled: false
     key-store: C:/ssl/poman.kr/sectigo/keystore.jks
     key-store-type: jks
     key-store-password: 26809t
     key-alias: www.poman.kr
 
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json
+
 spring:
   mvc:
     static-path-pattern: /**
+
+  thymeleaf:
+    cache: false
+    mode: HTML5
+
+  devtools:
+    livereload:
+      enabled: true
+
+

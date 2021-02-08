@@ -1,12 +1,23 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148027310-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-148027310-1');
+</script>
+
 <meta charset="UTF-8">
 <meta property="og:title" content="포만감">
 <meta property="og:description" content="PRE-ORDER FOOD DELIVERY PLATFORM">
 <meta property="og:image" content="https://poman.kr:9530/api/v1.2/assets/images/_bases/logo.png">
 <meta name="description" content="세상을 배부르게, 포만감">
-<meta name="keywords" content="포만감, 포만, 만족, 감동, 배달, 배송, 정기배달, 정기배송, 기업배달, 기업배송, 대학교, 대학교배달">
+<meta name="keywords" content="포만감, 포만, 만족, 감동, 배달, 배송, 정기배달, 정기배송, 기업배달, 기업배송, 대학교, 대학교배달, 도시락, 기업 도시락, 기업 도시락 배송, 기업 도시락 배달, 회사 도시락, 회사 도시락 배달">
 <meta name="author" content="포만감">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -66,7 +77,7 @@
   <div class="status">&nbsp;</div>
 </div>
 
-<a class="custom-badge" href="/app">
+<a class="custom-badge" href="/order">
 	<div style="float:right; padding: 5px; text-align: left;">포만감<br>주문하기</div>
 </a>
 
@@ -98,7 +109,8 @@
 			<!-- NAVIGATION LINKS -->
 			<div class="navbar-collapse collapse" id="kane-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation">
-					<li><a href="/b2c">포만배송</a></li>
+					<li><a href="/order">주문하기</a></li>
+<!--					<li><a href="/b2c">포만배송</a></li>-->
 					<li><a href="/b2b">정기배송</a></li>
 					<li><a href="/company">회사소개</a></li>
 					<li><a href="#section6">제휴문의</a></li>
@@ -181,11 +193,12 @@
 		<div class="col-md-6 wow fadeInRight animated animated" data-wow-offset="30" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInRight;">
 			<div class="video_area">
         <img src="images/phone-bg.png" alt="" class="bg_video">
-        <video muted playsinline autoplay loop>
-          <source src="video/app1.mp4" type="video/mp4"> 
-          IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다. 
-        </video>
-        <img src="/images/bg_video_first.png" alt="" class="video" style="display: none;">
+		<video muted playsinline autoplay loop>
+			<source src="video/app_1.mp4" type="video/mp4">
+			IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다.
+		</video>
+
+        <img src="images/bg_video_first.png" alt="" class="video" style="display: none;">
       </div>
 		</div>
 		
@@ -201,97 +214,101 @@
 
 
 <!-- =========================
-     SECTION 2 - 포만배송
+     SECTION 2 - 정기배송
 ============================== -->
 <section class="app-brief" id="section2">
-	
 <div class="container section2-container">
-	
-	<div class="row">
+
+	<!-- SECTION HEADER -->
+	<div class="section-header wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+
+		<div class="h2" style="font-weight: bold; color: white">포만감 정기배송</div>
+		<div style="border-bottom: solid 1px #ff4500; width: 150px;position: absolute;left: 50%;transform: translate(-50%);margin-top: 10px;"></div>
+	</div>
+	<!-- /END SECTION HEADER -->
+
+	<div class="row step-row">
 		
-		<!-- BRIEF -->
-		<div class="col-md-7 left-align">
-			
-			<!-- SECTION TITLE -->
-			<h2 class="white-text wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" style="font-weight: bold;">
-				너는 떡볶이, 나는 햄버거.<br><br>
-				각자 먹고 싶은 음식 주문도,<br>
-				1인분 주문도 모두 배달료 0원
-			</h2>
-			
-			<div class="colored-line-left">
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/drinks_step_1_3x.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 1</div>
+				<div class="step-contents">하루 식사 가격 <strong style="color:#333">5,760원</strong><br>정기배송을 간단하게 신청하세요.</div>
 			</div>
-			
-			<p class="wow fadeInUp animated" data-wow-delay="0.5s" data-wow-offset="30" data-wow-duration="1.5s" style="color: white">
-				더 이상 식사 메뉴를 통일할 필요가 없습니다.<br>
-				각자 취향에 맞는 든든한 한 끼를 선택하면 포만감이 배달해드립니다.
-			</p>
-			
-			<div class="colored-line-left" style="margin-top: 20px;">
-			</div>
-			<br>
-			
-			<!-- MORE -->
-			<div style="margin-top: 15px;">
-				<a href="/b2c" class="more wow fadeInUp animated" data-wow-delay="0.7s" data-wow-offset="30" data-wow-duration="1.5s" >포만배송 더 알아보기</a>
-			</div>
-			
 		</div>
-		<!-- /ENDBRIEF -->
-		
-		<div class="col-md-5 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s">
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/food_step_3.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 2</div>
+				<div class="step-contents">매일 <strong style="color:#333">점심시간, 회사 문 앞</strong>으로<br>따듯한 집밥이 배송됩니다.</div>
+			</div>
+		</div>
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/drinks_step_2_3x.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 3</div>
+				<div class="step-contents">번거로운 <strong style="color:#333">쓰레기, 음식물 처리</strong><br>포만감 회수팀이 치워드립니다.</div>
+			</div>
 		</div>
 		
 	</div>
 	<!-- /END ROW -->
+
+	<div style="margin-top: 100px;">
+		<a href="/#section6" class="more wow fadeInUp animated" data-wow-delay="0.7s" data-wow-offset="30" data-wow-duration="1.5s" style="font-weight: normal !important;">
+			정기배송 신청하기
+		</a>
+	</div>
 	
 </div>
 <!-- /END CONTAINER -->
 </section>
 <!-- /END SECTION 2 -->
 
-	
+
+<section class="trans-divider">
+	<div class="color-overlay"></div>
+</section>
+
 <!-- =========================
-     SECTION 3 - 정기배송
+     SECTION 3 - 식단표
 ============================== -->
-<section class="app-brief" id="section3">
+<section class="testimonials deep-dark-bg" id="section3">
 
 <div class="container section3-container">
-	
-	<div class="row">
-		
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-5 left-align wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s">
-			
-			<!-- SECTION TITLE -->
-			<h2 class="white-text" style="font-weight: bold">그리운 집밥,<br>포만감이 정기적으로 배송해드립니다.</h2>
 
-			<div class="colored-line-left">
+	<!-- SECTION HEADER -->
+	<div class="section-header wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+
+		<div class="h2" style="font-weight: bold; color: white">포만감 정기식단</div>
+		<div style="border-bottom: solid 1px #ff4500; width: 150px;position: absolute;left: 50%;transform: translate(-50%);margin-top: 10px;"></div>
+		<p style="color: white; margin-top: 50px">
+			매주 새롭고 특별한 식단으로 배송됩니다.
+		</p>
+	</div>
+	<!-- /END SECTION HEADER -->
+
+	<div class="row wow bounceIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+		<div id="screenshots2" class="owl-carousel owl-theme">
+
+			<div th:each="carte : ${cartes}" class="shot">
+				<a th:href="@{${carte.getImagePath()}}" data-lightbox-gallery="screenshots-gallery">
+					<img th:src="@{${carte.getImagePath()}}" alt="Screenshot" style="object-fit: cover">
+					<div class="shot-inner-box">
+						<span th:text="${carte.convertDateToString()}" class="shot-inner-author" style="margin-bottom:15px"></span>
+						<span class="shot-inner-contents">
+							<th:block th:each="item : ${carte.getCarteItems()}">
+								<th:block th:text="${item.getName()}"></th:block><br>
+							</th:block>
+						</span>
+					</div>
+				</a>
 			</div>
-			
-			<p style="color: white">
-				집밥이 특별한 이유는, 그 사람만을 위한 밥 짓는 이의 관심과 정성이 들어가 있기 때문입니다.<br>
-				포만감 정기배송은 고객에게 맞추어진 특별한 식단을 준비하여 따뜻한 밥상의 온기 그대로 매일 전해드립니다.
-			</p>
-			
-			<div class="colored-line-left" style="margin-top: 20px">
-			</div>
-			<br>
-			
-			<!-- MORE -->
-			<div style="margin-top: 15px;">
-				<a href="/b2b" class="more">정기배송 더 알아보기</a>
-			</div>
-			
+
 		</div>
-		<!-- /END RIGHT BRIEF -->
-		
-		<div class="col-md-7 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s">
-			<div class="phone-image section3-image">
-				<img src="images/carte.jpg" alt="" style="border-radius: 10px;">
-			</div>
-		</div>
-		
+		<!-- /END SCREENSHOTS -->
+
 	</div>
 	<!-- /END ROW -->
 	
@@ -311,7 +328,7 @@
 <!-- =========================
      SECTION 4 - APP 소개
 ============================== -->
-<section class="app-brief deep-dark-bg" id="section4">
+<section class="app-brief" id="section4">
 
 <div class="container section4-container">
 	
@@ -321,11 +338,11 @@
 		<div class="col-md-6 wow fadeInRight animated animated" data-wow-offset="30" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInRight;">
 			<div class="video_area">
         <img src="images/phone-bg.png" alt="" class="bg_video">
-        <video muted playsinline autoplay loop>
-          <source src="video/app1.mp4" type="video/mp4"> 
+        <video muted playsinline autoplay loop >
+          <source src="video/app_1.mp4" type="video/mp4">
           IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다. 
         </video>
-        <img src="/images/bg_video_first.png" alt="" class="video" style="display: none;">
+        <img src="images/bg_video_first.png" alt="" class="video" style="display: none;">
       </div>
 		</div>
 		
@@ -415,16 +432,107 @@
 		<div id="screenshots" class="owl-carousel owl-theme">
 			
 			<div class="shot">
-				<a href="images/screenshots/s1.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s1.png" alt="Screenshot">
+				<a href="images/screenshots/s2.jpg" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s2.jpg" alt="Screenshot" style="object-fit: cover;">
 					<div class="shot-inner-box">
 						<span class="shot-inner-title">
-							" 회사 근처에 식당이 적어 식사 고민이 많았는데, 포만감 덕분에 해결되었어요. "
+							" 매일 바뀌는 식단 덕분에 '뭐먹지?' 고민할 필요가 없어요! "
 						</span>
 						<span class="shot-inner-contents">
-							포만감을 이용한 뒤로는, 직원들의 식사 만족도가 매우 높아졌어요. 힘들게 이동하지 않아도 되고, 남는 시간을 활용할 수 있다고 행복해합니다.
+							포만감을 이용한 뒤로, 점심시간이 기다려져요. 호불호 없는 식단 구성과 다채로운 메뉴 덕분에 회사에서도 건강을 챙길 수 있게 되었습니다.
+						</span>
+						<span class="shot-inner-author">H기업 한OO 님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s8.jpg" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s8.jpg" alt="Screenshot">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 정확한 정시 배송 덕분에 점심시간이 여유로워졌어요. "
+						</span>
+						<span class="shot-inner-contents">
+							매일 같은 시간에 맞춰 오셔서 빠르게 식사를 끝낼 수 있어요. 덕분에 남은 시간 여유롭게 커피도 마시고 낮잠도 잘 수 있어서 너무 만족스럽습니다.
+						</span>
+						<span class="shot-inner-author">A기업 최OO 님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s1.jpg" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s1.jpg" alt="Screenshot">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 정말 맛있는데 너무 맛있는데... 건강한 맛까지 느낄 수 있어요. "
+						</span>
+						<span class="shot-inner-contents">
+							조미료를 거의 사용하지 않은 것 같아요. 음식 하나하나가 정갈하고 깔끔해서 엄마가 해준 집 밥을 먹는 기분이 들어요.
+						</span>
+						<span class="shot-inner-author">I기업 박OO 님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s4.jpg" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s4.jpg" alt="Screenshot">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 너무 고급스러운 구성 때문에 점심시간마다 모두들 사진 찍기 바빠요. "
+						</span>
+						<span class="shot-inner-contents">
+							입으로 맛보기 전에 눈으로 먼저 먹는 기분이에요! 다량의 도시락을 어쩜 이렇게 예쁘게 만들 수 있는지... 인스타그램용 사진으로 완전 딱!
+						</span>
+						<span class="shot-inner-author">C기업 김OO 님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s2.png" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s2.png" alt="Screenshot" style="object-fit: cover;">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 식대 관리를 편리하게 처리할 수 있어서 너무 편해요. "
+						</span>
+						<span class="shot-inner-contents">
+							세금계산서까지 발급해 주고, 결제도 편리해서 직원들 식대 관리가 매우 편안해졌습니다! 직원 모두가 너무너무 만족스러워합니다!
+						</span>
+						<span class="shot-inner-author">B기업 한OO 담당자님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s6.jpg" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s6.jpg" alt="Screenshot">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 기사님이 너무 친절하고, 도시락에 붙어오는 쪽지도 너무 감동적입니다. "
+						</span>
+						<span class="shot-inner-contents">
+							힘든 회사 생활에도 친절한 기사님과 고객 응대 서비스 덕분에 마음이 따뜻해져요. '오늘의 잔소리' 쪽지도 너무 인상적이에요
+
 						</span>
 						<span class="shot-inner-author">A기업 최OO 담당자님</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/s7.png" data-lightbox-gallery="screenshots-gallery">
+					<img src="images/screenshots/s7.png" alt="Screenshot" style="object-fit: cover;">
+					<div class="shot-inner-box">
+						<span class="shot-inner-title">
+							" 자체 어플이 있어서 메뉴를 보고 주문하는 것도 정말 편리합니다. "
+						</span>
+						<span class="shot-inner-contents">
+							매일 바뀌는 식단을 보고 바로 주문할 수 있어서 정말 편리해요! 직원들 모두 앱을 깔아서 각자 주문해서 함께 먹을 수 있는 점이 너무 좋아요.
+						</span>
+						<span class="shot-inner-author">D기업 홍OO 담당자님</span>
 					</div>
 				</a>
 			</div>
@@ -434,102 +542,12 @@
 					<img src="images/screenshots/s3.png" alt="Screenshot">
 					<div class="shot-inner-box">
 						<span class="shot-inner-title">
-							" 식사 업체를 바꿨을 뿐인데, 회사 분위기가 밝아진 것 같아 뿌듯하네요. "
+							" 요즘 배달 요금도 너무 비싼데, 무료배달에 합리적인 음식 가격 때문에 매일 주문합니다. "
 						</span>
 						<span class="shot-inner-contents">
-							예전에는 직원들이 '점심, 어디서 뭘 먹지?'에 대해 고민했는데, 포만감 이후에는 '점심 먹고 무엇을 할까?' 고민하고 있어요. 우리 기업에 새로운 활력이 생긴 것 같아 뿌듯합니다.
+							무료 배달에, 신경 쓰지 않아도 점심시간에 맞추어 가져다주니까 정말 편리합니다. 고급스러운 음식인데도 합리적인 가격이라서 포만감을 고정적으로 매일 이용합니다!
 						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s2.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s2.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 식사도 맛있고, 담당자인 저의 업무까지 신경 써 주시는 모습에 감동했어요. "
-						</span>
-						<span class="shot-inner-contents">
-							직원들의 식사도 식사지만, 회계처리나 뒷정리, 위생 문제같은 귀찮은 일이 산더미였는데, 푸딩을 이용하고부터는 신경쓸 일 없어서 좋아요.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s4.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s4.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 점심 식사 후 즐기는 낮잠 시간, 푸딩 덕분에 누리고 있습니다. "
-						</span>
-						<span class="shot-inner-contents">
-							이동하지 않아도 되고, 치우지 않아도 되니 낮잠 잘 시간이 생겼네요? 오후 업무 시간이 한결 편해졌어요.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s1.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s1.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 회사 근처에 식당이 적어 식사 고민이 많았는데, 포만감 덕분에 해결되었어요. "
-						</span>
-						<span class="shot-inner-contents">
-							포만감을 이용한 뒤로는, 직원들의 식사 만족도가 매우 높아졌어요. 힘들게 이동하지 않아도 되고, 남는 시간을 활용할 수 있다고 행복해합니다.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s3.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s3.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 회사 근처에 식당이 적어 식사 고민이 많았는데, 포만감 덕분에 해결되었어요. "
-						</span>
-						<span class="shot-inner-contents">
-							포만감을 이용한 뒤로는, 직원들의 식사 만족도가 매우 높아졌어요. 힘들게 이동하지 않아도 되고, 남는 시간을 활용할 수 있다고 행복해합니다.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s2.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s2.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 회사 근처에 식당이 적어 식사 고민이 많았는데, 포만감 덕분에 해결되었어요. "
-						</span>
-						<span class="shot-inner-contents">
-							포만감을 이용한 뒤로는, 직원들의 식사 만족도가 매우 높아졌어요. 힘들게 이동하지 않아도 되고, 남는 시간을 활용할 수 있다고 행복해합니다.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
-					</div>
-				</a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/s4.png" data-lightbox-gallery="screenshots-gallery">
-					<img src="images/screenshots/s4.png" alt="Screenshot">
-					<div class="shot-inner-box">
-						<span class="shot-inner-title">
-							" 회사 근처에 식당이 적어 식사 고민이 많았는데, 포만감 덕분에 해결되었어요. "
-						</span>
-						<span class="shot-inner-contents">
-							포만감을 이용한 뒤로는, 직원들의 식사 만족도가 매우 높아졌어요. 힘들게 이동하지 않아도 되고, 남는 시간을 활용할 수 있다고 행복해합니다.
-						</span>
-						<span class="shot-inner-author">A기업 최OO 담당자님</span>
+						<span class="shot-inner-author">B기업 박OO 담당자님</span>
 					</div>
 				</a>
 			</div>
@@ -575,7 +593,7 @@
 					
 					<!-- IF MAIL SENDING UNSUCCESSFULL -->
 					<h4 class="error">
-						<i class="icon_error-circle_alt"></i> 성함과 연락처를 모두 적어주세요.
+						<i class="icon_error-circle_alt"></i> 성함과 이메일을 모두 적어주세요.
 					</h4>
 					
 					<div class="col-md-6">
@@ -583,7 +601,7 @@
 					</div>
 					
 					<div class="col-md-6">
-						<input class="form-control input-box" id="email" type="email" name="email" placeholder="연락처">
+						<input class="form-control input-box" id="email" type="email" name="email" placeholder="이메일">
 					</div>
 					
 					<div class="col-md-12">
@@ -615,12 +633,15 @@
 ============================== -->
 <footer class="deep-dark-bg">
 	<!-- COPYRIGHT TEXT -->
-	<div class="copyright">
+	<div class="copyright" style="width: 350px">
 		<p>
 			<b><a href="/">©포만감</a></b>
 		</p>
 		<p>
-			Tel. 0507-1300-6906<br>
+			사업자등록번호. 546-05-00933  |  대표자. 최은성<br>
+			<a href="https://poman.kr:9530/api/v1.2/policies/info" target="_blank">통신판매번호. 2019-고양덕양구-0617</a><br>
+			상호명. 포만감  |  Tel. 0507-1300-6906<br>
+			경기도 고양시 일산동구 숲속마을2로 114-3, 1층 101호 <br>
 			<a href="mailto:contact@poman.kr">contact@poman.kr</a>
 		</p>
 		<!-- SOCIAL ICONS -->
@@ -630,7 +651,7 @@
 			<li style="display: inline;"><a href="http://pf.kakao.com/_xlxbhlj" class="kakao"></a></li>
 		</ul>
 	</div>
-</footer>	
+</footer>
 <!-- /END FOOTER -->
 
 
@@ -654,7 +675,12 @@
 <script src="js/jquery.ajaxchimp.min.js"></script>
 <script src="js/jquery.fitvids.js"></script>
 <script src="js/custom.js"></script>
-<script>
+
+<script th:inline="javascript">
+
+	var sessionValue= /*[[ ${session.isName} ]]*/ "";
+	console.log(sessionValue);
+
 	function isMobile(){
 		var UserAgent = navigator.userAgent;
 		if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {

@@ -145,6 +145,16 @@ $(document).ready(function () {
         itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
     });
 
+    var owl2 = $("#screenshots2");
+
+    owl2.owlCarousel({
+      items: 5, //10 items above 1000px browser width
+      itemsDesktop: [1000, 5], //5 items between 1000px and 901px
+      itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+      itemsTablet: [600, 1], //2 items between 600 and 0
+      itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+    });
+
 
 });
 
@@ -156,6 +166,10 @@ $(document).ready(function () {
 
     $('#screenshots a').nivoLightbox({
         effect: 'fadeScale',
+    });
+
+    $('#screenshots2 a').nivoLightbox({
+      effect: 'fadeScale',
     });
 
 });
@@ -199,19 +213,32 @@ $("#subscribe").submit(function (e) {
 =================================== */
 $("#contact").submit(function (e) {
     e.preventDefault();
-    var name = $("#name").val();
-    var phone = $("#phone").val();
-    var message = $("#message").val();
-    var dataString = 'name=' + name + '&phone=' + phone + '&message=' + message;
+    var clientName = $("#name").val();
+    var clientEmail = $("#email").val();
+    var contents = $("#message").val();
 
-    if ((phone.length > 1) && (name.length > 1)) {
+    if(contents.length == 0) {
+      contents = '';
+    }
+
+    var data = {
+      "clientName" : clientName,
+      "clientEmail" : clientEmail,
+      "contents" : contents
+    };
+
+    if ((clientEmail.length > 1) && (clientName.length > 1)) {
         $.ajax({
             type: "POST",
-            url: "sendmail.php",
-            data: dataString,
-            success: function () {
-                $('.success').fadeIn(1000);
-                $('.error').fadeOut(500);
+            url: "https://poman.kr:9530/api/v1.2/emails/partnership",
+            data: JSON.stringify(data),
+            dataType : 'json',
+            contentType : 'application/json',
+            complete: function(data) {
+              console.log('ss');
+              $("#contact")[0].reset();
+              $('.success').fadeIn(1000);
+              $('.error').fadeOut(500);
             }
         });
     } else {

@@ -1,12 +1,23 @@
 <!doctype html>
 <html lang="ko">
 <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148027310-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-148027310-1');
+</script>
+
 <meta charset="UTF-8">
 <meta property="og:title" content="포만감">
 <meta property="og:description" content="PRE-ORDER FOOD DELIVERY PLATFORM">
 <meta property="og:image" content="https://poman.kr:9530/api/v1.2/assets/images/_bases/logo.png">
 <meta name="description" content="세상을 배부르게, 포만감">
-<meta name="keywords" content="포만감, 포만, 만족, 감동, 배달, 배송, 정기배달, 정기배송, 기업배달, 기업배송, 대학교, 대학교배달">
+	<meta name="keywords" content="포만감, 포만, 만족, 감동, 배달, 배송, 정기배달, 정기배송, 기업배달, 기업배송, 대학교, 대학교배달, 도시락, 기업 도시락, 기업 도시락 배송, 기업 도시락 배달, 회사 도시락, 회사 도시락 배달">
 <meta name="author" content="포만감">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -94,7 +105,8 @@
 			<!-- NAVIGATION LINKS -->
 			<div class="navbar-collapse collapse" id="kane-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation">
-					<li><a href="/b2c">포만배송</a></li>
+					<li><a href="/order">주문하기</a></li>
+<!--					<li><a href="/b2c">포만배송</a></li>-->
 					<li><a href="/b2b"><div class="nav-active">정기배송</div></a></li>
 					<li><a href="/company">회사소개</a></li>
 					<li><a href="/#section6">제휴문의</a></li>
@@ -111,6 +123,7 @@
 		<div class="intro-section">
 			<!-- WELCOM MESSAGE -->
 			<h2 class="intro" id="typing1"></h2>
+			<h4 id="typing2"></h4>
 		</div>
 		<!-- /END HEADNING AND BUTTONS -->
 	</div>
@@ -136,15 +149,9 @@
 <div class="container section1-container">
 	
 	<div class="row">
-		
-		<div class="col-md-7 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s">
-			<div class="phone-image section3-image">
-				<img src="images/carte.jpg" alt="" style="border-radius: 10px;">
-			</div>
-		</div>
-		
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-5 left-align wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s">
+
+		<!-- LEFT SIDE WITH BRIEF -->
+		<div class="col-md-7 left-align wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s">
 			
 			<!-- SECTION TITLE -->
 			<h2 class="white-text" style="font-weight: bold">그리운 집밥,<br>포만감이 정기적으로 배송해드립니다.</h2>
@@ -163,11 +170,17 @@
 			
 			<!-- MORE -->
 			<div style="margin-top: 15px;">
-				<a href="/#section6" class="more">정기배송 제휴문의</a>
+				<a href="/b2b#b2b-section3" class="more">정기배송 신청하기</a>
 			</div>
 			
 		</div>
-		<!-- /END RIGHT BRIEF -->
+		<!-- /END LEFT BRIEF -->
+
+		<div class="col-md-5 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="phone-image section3-image">
+				<img src="images/b2b-1.jpg" alt="" style="border-radius: 10px; height: 550px; object-fit: cover;">
+			</div>
+		</div>
 		
 	</div>
 	<!-- /END ROW -->
@@ -184,128 +197,132 @@
 ============================== -->
 <section class="" id="b2c-section2">
 
-<div class="container section1-container">
-	
-	<div class="row">
-		
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-6 left-align">
+<div class="container section2-container">
 
-			<!-- SECTION TITLE -->
-			<h2 class="b2c-title wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" style="font-weight: bold; color:#232323;text-align: left;">
-				포만감만의 맞춤형 콘텐츠로<br>
-				특별한 혜택을 즐기세요
-			</h2>
+	<!-- SECTION HEADER -->
+	<div class="section-header wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
 
-			<div class="colored-line-left">
-			</div>
-			<br>
-			<p class="b2c-title wow fadeInUp animated" data-wow-delay="0.5s" data-wow-offset="30" data-wow-duration="1.5s" style="font-weight: bold; color:#232323;text-align: left;">
-				포만감은 고객 식사시간에 맞춰 따뜻한 음식을 정시 배달해 드리는 주문 예약 플랫폼으로
-				보다 쉽게 주문하고 빠르게 결제할 수 있는 서비스입니다.
-			</p>
-			
-			<div class="colored-line-left" style="margin-top: 20px">
-			</div>
-			<br>
-			
-			<!-- MORE -->
-			<div class="b2b-mou">
-				<a href="/#section6" class="more-black">정기배송 제휴문의</a>
-			</div>
+		<div class="h2" style="font-weight: bold; color: black">포만감 정기배송</div>
+		<div style="border-bottom: solid 1px #ff4500; width: 150px;position: absolute;left: 50%;transform: translate(-50%);margin-top: 10px;"></div>
+	</div>
+	<!-- /END SECTION HEADER -->
 
+	<div class="row step-row">
+
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/drinks_step_1_3x.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 1</div>
+				<div class="step-contents">하루 식사 가격 <strong style="color:#333">5,760원</strong><br>정기배송을 간단하게 신청하세요.</div>
+			</div>
 		</div>
-		<!-- /END RIGHT BRIEF -->
-		
-		<!-- IMAGE -->
-		<div class="col-md-6 wow fadeInRight animated animated" data-wow-offset="30" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInRight;">
-			<div class="video_area">
-        <img src="images/phone-bg.png" alt="" class="bg_video">
-        <video muted playsinline autoplay loop>
-          <source src="video/app1.mp4" type="video/mp4"> 
-          IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다. 
-        </video>
-        <img src="/images/bg_video_first.png" alt="" class="video" style="display: none;">
-      </div>
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/food_step_3.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 2</div>
+				<div class="step-contents">매일 <strong style="color:#333">점심시간, 회사 문 앞</strong>으로<br>따듯한 집밥이 배송됩니다.</div>
+			</div>
 		</div>
-		
+		<div class="col-md-4 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+			<div class="step">
+				<img src="https://b.zmtcdn.com/images/red/drinks_step_2_3x.png?output-format=webp" class="step-img" alt="제휴" width="135px" height="135px">
+				<div class="step-title">Step 3</div>
+				<div class="step-contents">번거로운 <strong style="color:#333">쓰레기, 음식물 처리</strong><br>포만감 회수팀이 치워드립니다.</div>
+			</div>
+		</div>
+
 	</div>
 	<!-- /END ROW -->
-	
+
+	<div style="margin-top: 100px;">
+		<a href="/b2b#b2b-section3" class="more-black wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" style="color: black !important;">
+			정기배송 신청하기
+		</a>
+	</div>
+
 </div>
 <!-- /END CONTAINER -->
 
 </section>
 <!-- /END SECTION 2 -->
-	
-	
+
 <!-- =========================
-		SECTION 3 - app3
+     SECTION 3 - 문의하기
 ============================== -->
-<section class="" id="b2c-section3">
+<section class="contact" id="b2b-section3">
 
-<div class="container section1-container">
+	<div class="container section1-container">
 
-	<div class="row">
+		<div class="contact-box wow rotateIn animated" data-wow-offset="10" data-wow-duration="1.5s">
 
-		<!-- IMAGE -->
-		<div class="col-md-6 wow fadeInRight animated animated" data-wow-offset="30" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInRight;">
-			<div class="video_area">
-				<img src="images/phone-bg.png" alt="" class="bg_video">
-				<video muted playsinline autoplay loop>
-					<source src="video/app1.mp4" type="video/mp4"> 
-					IE 8 이하는 비디오가 나오지 않습니다. IE 버전을 업데이트 하시길 바랍니다. 
-				</video>
-				<img src="/images/bg_video_first.png" alt="" class="video" style="display: none;">
+			<a class="btn contact-button expand-form expanded" style="display: none"><i class="icon_mail_alt"></i></a>
+
+			<h2 style="font-weight: bold; color: white;">정기배송 시작하기</h2>
+
+			<!-- EXPANDED CONTACT FORM -->
+			<div class="row expanded-contact-form">
+
+				<div class="col-md-8 col-md-offset-2 wow fadeIn animated" data-wow-offset="30" data-wow-duration="1.5s">
+
+					<!-- FORM -->
+					<form class="contact-form" id="contact" role="form">
+
+						<!-- IF MAIL SENT SUCCESSFULLY -->
+						<h4 class="success">
+							<i class="icon_check"></i> 문의가 성공적으로 등록되었습니다.
+						</h4>
+
+						<!-- IF MAIL SENDING UNSUCCESSFULL -->
+						<h4 class="error">
+							<i class="icon_error-circle_alt"></i> 성함과 이메일을 모두 적어주세요.
+						</h4>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="name" type="text" name="name" placeholder="성함" style="color: black; background: #fff">
+						</div>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="email" type="email" name="email" placeholder="이메일" style="color: black; background: #fff">
+						</div>
+
+						<div class="col-md-12">
+							<textarea class="form-control textarea-box" id="message" rows="8" placeholder="문의하실 내용을 입력해주세요" style="color: black; background: #fff"></textarea>
+						</div>
+
+						<button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left">문의하기</button>
+
+					</form>
+					<!-- /END FORM -->
+
+				</div>
+
 			</div>
+			<!-- /END EXPANDED CONTACT FORM -->
+
 		</div>
-
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-6 left-align">
-
-			<!-- SECTION TITLE -->
-			<h2 class="b2c-title wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" style="font-weight: bold; color:#232323;text-align: left;">나의 소중한 점심시간을<br>포만감으로 만나보세요</h2>
-
-			<div class="colored-line-left">
-			</div>
-		
-			<br>
-			<!-- APP DOWNLOAD BUTTONS -->
-			<div class="b2c-download">
-				<a href="https://poman.page.link/app" class="download-btn">
-					<img src="images/android_download.png" alt="" width="100%"> 
-					<span class="a11y">Google Play 다운로드</span>
-				</a>
-				<a href="https://poman.page.link/app" class="download-btn">
-					<img src="images/ios_download.png" alt="" width="100%"> 
-					<span class="a11y">App Store 다운로드</span>
-				</a>
-			</div>
-
-		</div>
-		<!-- /END RIGHT BRIEF -->
+		<!-- /END CONTACT BOX -->
 
 	</div>
-	<!-- /END ROW -->
-
-</div>
-<!-- /END CONTAINER -->
+	<!-- /END CONTAINER -->
 
 </section>
 <!-- /END SECTION 3 -->
-	
-	
+
+
 <!-- =========================
      FOOTER 
 ============================== -->
 <footer class="deep-dark-bg">
 	<!-- COPYRIGHT TEXT -->
-	<div class="copyright">
+	<div class="copyright" style="width: 350px">
 		<p>
 			<b><a href="/">©포만감</a></b>
 		</p>
 		<p>
-			Tel. 0507-1300-6906<br>
+			사업자등록번호. 546-05-00933  |  대표자. 최은성<br>
+			<a href="https://poman.kr:9530/api/v1.2/policies/info" target="_blank">통신판매번호. 2019-고양덕양구-0617</a><br>
+			상호명. 포만감  |  Tel. 0507-1300-6906<br>
+			경기도 고양시 일산동구 숲속마을2로 114-3, 1층 101호 <br>
 			<a href="mailto:contact@poman.kr">contact@poman.kr</a>
 		</p>
 		<!-- SOCIAL ICONS -->
@@ -315,7 +332,7 @@
 			<li style="display: inline;"><a href="http://pf.kakao.com/_xlxbhlj" class="kakao"></a></li>
 		</ul>
 	</div>
-</footer>	
+</footer>
 <!-- /END FOOTER -->
 
 
@@ -416,6 +433,57 @@
 			mobile: false
 		});
 	wow.init();
+
+	/* =================================
+	===  CONTACT FORM          ====
+	=================================== */
+	$("#contact").submit(function (e) {
+		e.preventDefault();
+		var clientName = $("#name").val();
+		var clientEmail = $("#email").val();
+		var contents = $("#message").val();
+
+		if(contents.length == 0) {
+			contents = '';
+		}
+
+		var data = {
+			"clientName" : clientName,
+			"clientEmail" : clientEmail,
+			"contents" : contents
+		};
+
+		if ((clientEmail.length > 1) && (clientName.length > 1)) {
+			$.ajax({
+				type: "POST",
+				url: "https://poman.kr:9530/api/v1.2/emails/partnership",
+				data: JSON.stringify(data),
+				dataType : 'json',
+				contentType : 'application/json',
+				complete: function(data) {
+					console.log('ss');
+					$("#contact")[0].reset();
+					$('.success').fadeIn(1000);
+					$('.error').fadeOut(500);
+				}
+			});
+		} else {
+			$('.error').fadeIn(1000);
+			$('.success').fadeOut(500);
+		}
+
+		return false;
+	});
+
+
+
+
+	/* =================================
+    ===  EXPAND COLLAPSE            ====
+    =================================== */
+	$('.expand-form').simpleexpand({
+		'defaultTarget': '.expanded-contact-form'
+	});
 	
 	/* =================================
 	===  Bootstrap Internet Explorer 10 in Windows 8 and Windows Phone 8 FIX
@@ -434,8 +502,10 @@
 	$(function() {
 		var i = 0;
 		var j = 0;
+		var k = 0;
 		var txt1 = '그리운 집밥,';
 		var txt2 = ' 밥상의 온도';
+		var txt3 = '정기적으로 따듯한 집밥을 배송 받는 방법';
 
 		function typeWriter1() {
 			if (i < txt1.length) {
@@ -443,7 +513,7 @@
 				i++;
 				setTimeout(typeWriter1, 100);
 			} else {
-				setTimeout(typeWriter2, 300);
+				setTimeout(typeWriter2, 200);
 			}
 		}
 		
@@ -453,9 +523,20 @@
 				j++;
 				setTimeout(typeWriter2, 100);
 			} else {
+				setTimeout(typeWriter3, 200);
+			}
+		}
+
+		function typeWriter3() {
+			if (k < txt3.length) {
+				document.getElementById("typing2").innerHTML += txt3.charAt(k);
+				k++;
+				setTimeout(typeWriter3, 50);
+			} else {
 				setTimeout(() => $('#down-scroll-btn').show(), 500);
 			}
 		}
+
 		setTimeout(typeWriter1, 500);
 		
 	});
